@@ -1,0 +1,11 @@
+<div class="card bg-light detail-section">
+  <img class="details-img" src="assets/img/{{salad.img}}">
+  <div class="card-body">
+    <h2>{{ salad.name }}</h2>
+    <p>{{ salad.ingredient}}</p>
+  </div>
+  <button type="button" class="btn btn-primary edit-btn"
+          [disabled]="!authService.isAuthenticated()"
+          (click)="editSaladInfo()">Edit card</button>
+  <div class="notification" *ngIf="!authService.isAuthenticated()">Log in to the app for editing</div>
+</div>

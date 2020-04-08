@@ -1,0 +1,23 @@
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="form-group">
+  <label> First Name
+    <input type="text" class="form-control" formControlName="firstName">
+
+    <span
+      *ngIf="contactForm.get('firstName') && contactForm.touched">
+      Error - the same name is required
+    </span>
+    <span></span>
+  </label>
+
+  <label>Last Name
+    <input type="text" class="form-control" formControlName="lastName">
+  </label>
+
+  <div formGroupName="message">
+    <input formControlName="nameMessage">
+    <input formControlName="info">
+  </div>
+
+  <button type="submit"
+          [disabled]="!contactForm.valid && contactForm.touched">Submit info</button>
+</form>

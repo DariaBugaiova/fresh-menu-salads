@@ -1,0 +1,59 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+::-moz-selection {
+  background: #b444ff;
+}
+
+::selection {
+  background: #b444ff;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+}
+
+p {
+  max-width: 640px;
+  margin-bottom: 2rem;
+}
+
+header {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+header h2 {
+  text-align: center;
+}
+
+footer {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+footer p {
+  max-width: 100%;
+  text-align: right;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.container {
+  max-width: 1250px;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+button:focus {
+  outline: none;
+}

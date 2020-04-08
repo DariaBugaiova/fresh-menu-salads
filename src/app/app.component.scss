@@ -1,0 +1,32 @@
+.active {
+  color: #1976c3;
+}
+
+.main-container {
+  height: 100vh;
+  width: auto;
+  background-color: var(--accent-darker-color);
+  padding: 20rem 5rem;
+}
+
+.parent {
+  border: 1px solid blueviolet;
+  min-height: 200px;
+  width: 700px;
+  display: inline-block;
+
+  .element-centred:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 1%;
+    vertical-align: middle;
+  }
+
+  .element-centred {
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #1d7550;
+
+  }
+}

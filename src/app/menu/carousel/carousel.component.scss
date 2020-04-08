@@ -1,0 +1,142 @@
+
+// Salad`s card
+.card {
+  min-width: 16vw;
+  margin-bottom: .85rem;
+  transition: transform 150ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+
+.card-body {
+  height: 100px;
+
+.card-text {
+  overflow: hidden;
+  position: relative;
+  line-height: 1.2em;
+  max-height: 4.8em;
+  text-align: unset;
+  margin-right: -1em;
+  padding-right: 1em;
+  cursor: pointer;
+
+
+  &:hover {
+    transform: scale(1.025);
+  }
+  // create ellipsis for several lines
+  &:before {
+   content: '...';
+   position: absolute;
+   right: 0;
+   bottom: 0;
+  }
+
+// hide ellipsis if text is less or equal than max lines
+   &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 1em;
+    height: 1em;
+    margin-top: 0.2em;
+    background: white;
+  }
+}
+}
+
+&>img {
+   max-width: 12rem;
+   float: left;
+   margin: 1rem;
+ }
+}
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  display: block;
+  padding: 2em;
+  max-width: 125rem;
+  height: 20rem;
+}
+
+// Carousel
+.carousel {
+  height: 100%;
+  width: 85%;
+  overflow: hidden;
+  border-radius: 0.5em;
+  margin: 0 auto;
+}
+
+// control btn
+
+.control {
+  border: none;
+  background-color: transparent;
+  outline: 0; // remove blue outline border, but make sure they are still focussable for accessibility
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  user-select: none;
+  height: 100%;
+  opacity: 80%;
+  box-shadow: 0 0 8px 1px var(--primary-darker-color);
+  // opacity effect on hover
+  transition: opacity 150ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+
+  &:hover, &:focus {
+    opacity: 1;
+  }
+
+  /* Position the buttons */
+  &.next {
+    right: 10rem;
+    background-color: white;
+  }
+
+  &.prev {
+    left: 10rem;
+    background-color: white;
+  }
+
+  &.prev,
+  &.next {
+    height: 3.5rem;
+    width: 3.5rem;
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    margin-top: -2.3rem;
+
+  }
+}
+
+// arrow
+.arrow {
+  display: block;
+  border-left: 0.2rem solid var(--accent-darker-color);
+  border-bottom: 0.2rem solid var(--accent-darker-color);
+  width: 0.3em;
+  height: 0.3em;
+
+  &.left {
+    transform: rotate(45deg);
+    margin-left: 0.5rem;
+  }
+  &.right {
+    transform: rotate(225deg);
+    margin-right: 0.5rem;
+  }
+}

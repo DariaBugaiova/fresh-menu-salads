@@ -1,0 +1,42 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #sidenav mode="side" opened
+    fixedInViewport="fixed"
+    fixedTopGap="0"
+    class="sidenav">
+    <h3 class="app-title">{{ appName }}</h3>
+
+    <div class="menu-links" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">
+      <span><a class="menu-item" routerLink="/menu">
+        <mat-icon class="menu-icon mat-accent">menu_book</mat-icon>
+        <span >salads</span>
+      </a></span>
+      <a class="menu-item" routerLink="/menu">
+        <mat-icon class="menu-icon mat-accent">restaurant</mat-icon>
+        <span>breakfast</span>
+      </a>
+      <a class="menu-item" routerLink="/contact">
+        <mat-icon class="menu-icon mat-accent">local_florist</mat-icon>
+        <span>contact us</span>
+      </a>
+
+      <mat-menu #appMenu="matMenu">
+        <button mat-menu-item>Settings</button>
+        <button mat-menu-item>Help</button>
+      </mat-menu>
+    </div>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="sidenav-content">
+      <div [ngClass]="{'icon-toggle-rotate': !sidenav.opened}">
+        <app-header>
+        </app-header>
+        <button (click)="sidenav.toggle()"
+                [autofocus]="false"
+                mat-mini-fab class="mat-mini-fab mat-primary icon-sidenav">
+                <mat-icon>keyboard_arrow_left</mat-icon>
+        </button>
+        <ng-content></ng-content>
+      </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

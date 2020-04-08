@@ -1,0 +1,75 @@
+@import '~@angular/material/theming';
+
+.sidenav-container {
+  margin: 6rem 2rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 1rem;
+
+  .sidenav {
+    margin: 6rem 0;
+    padding-top: 2rem;
+    border-radius: 1rem 0 0 1rem;
+    background-color: var(--accent-lighter-color);
+  }
+
+  .sidenav-content {
+    padding: 2rem;
+  }
+
+  .app-title {
+    text-align: center;
+    color: var(--accent-darker-color);
+    font-size: 22px;
+    letter-spacing: -1.5px;
+  }
+}
+
+.icon-sidenav {
+  display: inline-block;
+  margin-left: 5px;
+  position: fixed;
+  z-index: 5;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.menu-icon {
+  vertical-align: middle;
+  height: 2.4rem;
+  font-size: 2rem;
+  margin-right: 5px;
+}
+
+.icon-toggle-rotate {
+  .icon-sidenav {
+    transform: rotate(180deg);
+    transition: 0.5s;
+  }
+}
+
+.menu-links {
+  margin: 4rem auto;
+  width: 18rem;
+  & a {
+    color: var(--primary-dark-text-color);
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .menu-item {
+    display: block;
+    padding: 1rem 3rem;
+
+    &:hover {
+      background: linear-gradient( to right, rgba(141, 203, 180, 0.3), rgba(141, 203, 180, 0.1));
+      border-left: 3px solid;
+      border-color: var(--accent-darker-color);
+    }
+  }
+}
