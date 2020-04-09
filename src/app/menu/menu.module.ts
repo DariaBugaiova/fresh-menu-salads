@@ -10,6 +10,7 @@ import { RouterModule } from '@angular/router';
 import { MenuComponent } from './menu.component';
 import { AuthGuard } from '../auth/auth-guard.service';
 import { CarouselComponent } from './carousel/carousel.component';
+import { MaterialModule } from '../angular-material.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CarouselComponent } from './carousel/carousel.component';
     CommonModule,
     ReactiveFormsModule,
     MenuRoutingModule,
-    RouterModule
+    RouterModule,
+    MaterialModule
   ],
   exports: [MenuRoutingModule],
   providers: [AuthGuard]

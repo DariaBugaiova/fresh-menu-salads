@@ -58,9 +58,8 @@ const mm = [
   ]
 })
 export class MaterialModule {
-  constructor(public matIconRegistry: MatIconRegistry) {
-    // matIconRegistry.registerFontClassAlias('fontawesome', 'fa');
-  }
+
+  constructor(public matIconRegistry: MatIconRegistry) {}
 
   static forRoot(): ModuleWithProviders {
     return {

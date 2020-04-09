@@ -11,11 +11,25 @@
   <div class="carousel">
       <div class="row">
       <ng-container *ngFor="let saladCard of saladsCard; let i = index">
-        <div class="card-columns col-md-3 col-sm-12"
-              *ngIf="i >= getSlideCount(i)">
+        <div class="col-md-3 col-sm-12"
+                    (click)="viewCard(saladCard.id)"
+                    *ngIf="i>=getSlideCount(i)">
+          <mat-card class="salad-card">
+            <img src="assets/img/{{saladCard.img}}" alt="salad">
+            <mat-card-header>
+                <mat-card-title>
+                  <h5 class="card-title">{{saladCard.name}}</h5>
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <p class="card-text">{{saladCard.ingredient}}</p>
+            </mat-card-content>
+          </mat-card>
+
+
         <div class="card bg-light"
              (click)="viewCard(saladCard.id)">
-          <img src="assets/img/{{saladCard.img}}" alt="salad1">
+          <img src="assets/img/{{saladCard.img}}" alt="salad">
           <div class="card-body card-img-top
                           text-center card-link">
             <h5 class="card-title">{{saladCard.name}}</h5>
